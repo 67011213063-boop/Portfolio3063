@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ploy Portfolio | Phatcharin Issarawong</title>
+  <meta name="description" content="Personal portfolio of Phatcharin Issarawong (Ploy), 3rd-year Creative Media undergraduate student at the Faculty of Informatics, Mahasarakham University.">
+  
+  <!-- Google Fonts: Poppins & Prompt -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome CDN for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. Header & Navigation Bar (Shared across all pages, active on Home)
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Ploy Portfolio Homepage">
+        <span class="brand-badge"><i class="fa-solid fa-sparkles"></i></span>
+        <span class="brand-text">Ploy.<span>Portfolio</span></span>
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNavMenu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- Main Navigation Menu -->
+      <nav class="nav-menu" id="mainNavMenu" role="navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="education.html" class="nav-link">Education</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="activity.html" class="nav-link">Activity</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. Home Page Main Content
+       ========================================================================= -->
+  <main class="page-content">
+    <div class="container">
+      
+      <!-- Hero Section: Introduction & Profile Image -->
+      <section class="hero-section">
+        <div class="hero-grid">
+          
+          <!-- Greeting & Personal Information -->
+          <div class="hero-text reveal-on-scroll">
+            <div class="hero-badge">
+              <i class="fa-solid fa-palette"></i> Creative Media Student
+            </div>
+            
+            <h1 class="hero-greeting">
+              Hello, I'm <span class="gradient-text">Ploy</span>
+            </h1>
+            
+            <p class="hero-name">
+              Phatcharin Issarawong
+            </p>
+            
+            <div class="hero-status">
+              <i class="fa-solid fa-graduation-cap"></i> 3rd Year Student in Creative Media, Faculty of Informatics, Mahasarakham University
+            </div>
+            
+            <!-- Short Introduction (strictly based on real user data) -->
+            <p class="hero-desc">
+              Welcome to my creative portfolio! I am currently a third-year undergraduate student majoring in Creative Media at the Faculty of Informatics, Mahasarakham University. This space showcases my academic path, community activities, and design projects.
+            </p>
+            
+            <!-- Call-to-Action Buttons -->
+            <div class="hero-cta-group">
+              <a href="portfolio.html" class="btn btn-primary">
+                <i class="fa-solid fa-images"></i> View Portfolio
+              </a>
+              <a href="contact.html" class="btn btn-secondary">
+                <i class="fa-solid fa-paper-plane"></i> Contact Me
+              </a>
+            </div>
+          </div>
+
+          <!-- Profile Image (Placeholder: replace with your real photo at images/profile.jpg) -->
+          <div class="hero-avatar-wrapper reveal-on-scroll">
+            <div class="avatar-glow"></div>
+            <div class="avatar-frame">
+              <!-- Replace your real profile photo at images/profile.jpg -->
+              <img src="images/profile.jpg" alt="Profile photo of Phatcharin Issarawong (Ploy)" class="avatar-img" width="500" height="500">
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Shortcut Cards Section -->
+      <section class="shortcuts-section reveal-on-scroll">
+        <div class="section-header-center">
+          <h2 class="section-title">Explore My Journey</h2>
+          <p class="section-subtitle">Discover my educational milestones, extracurricular activities, or get in touch directly.</p>
+        </div>
+
+        <div class="shortcuts-grid">
+          
+          <!-- Shortcut 1: Education -->
+          <a href="education.html" class="shortcut-card education">
+            <div class="shortcut-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h3 class="shortcut-title">Education</h3>
+            <p class="shortcut-desc">Academic background from secondary school to my current university degree.</p>
+            <span class="shortcut-link-text">View Education <i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+
+          <!-- Shortcut 2: Activity -->
+          <a href="activity.html" class="shortcut-card activity">
+            <div class="shortcut-icon">
+              <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <h3 class="shortcut-title">Activity</h3>
+            <p class="shortcut-desc">Community contributions, voluntary service, and department sports events.</p>
+            <span class="shortcut-link-text">View Activities <i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+
+          <!-- Shortcut 3: Contact -->
+          <a href="contact.html" class="shortcut-card contact">
+            <div class="shortcut-icon">
+              <i class="fa-solid fa-comments"></i>
+            </div>
+            <h3 class="shortcut-title">Contact</h3>
+            <p class="shortcut-desc">Reach out via Facebook, Line ID, or Email with quick copy-to-clipboard buttons.</p>
+            <span class="shortcut-link-text">Get in Touch <i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       3. Footer (Shared across all pages)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        
+        <!-- Brand / Bio -->
+        <div class="footer-brand">
+          <h3>Phatcharin Issarawong (Ploy)</h3>
+          <p>Creative Media Student, Faculty of Informatics, Mahasarakham University</p>
+        </div>
+
+        <!-- Links to All Pages -->
+        <nav class="footer-nav" aria-label="Footer Navigation">
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="education.html" class="footer-link">Education</a>
+          <a href="portfolio.html" class="footer-link">Portfolio</a>
+          <a href="activity.html" class="footer-link">Activity</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </nav>
+
+        <!-- Social Channels -->
+        <div class="footer-socials">
+          <!-- Facebook: replace # with your real profile URL -->
+          <a href="#" class="social-icon-btn fb" aria-label="Facebook: Phatcharin Issarawong" title="Facebook: Phatcharin Issarawong">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <!-- Line ID -->
+          <a href="contact.html" class="social-icon-btn line" aria-label="Line ID: 0831487543" title="Line ID: 0831487543">
+            <i class="fa-brands fa-line"></i>
+          </a>
+          <!-- Email -->
+          <a href="mailto:phachrinthrxissrawngs6@gmail.com" class="social-icon-btn email" aria-label="Email: phachrinthrxissrawngs6@gmail.com" title="Email: phachrinthrxissrawngs6@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Copyright Notice -->
+      <div class="footer-bottom">
+        <p>© 2026 Phatcharin Issarawong. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>

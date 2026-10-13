@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Phatcharin Issarawong (Ploy)</title>
+  <meta name="description" content="Creative portfolio of Phatcharin Issarawong (Ploy), Creative Media student at the Faculty of Informatics, Mahasarakham University.">
+  
+  <!-- Google Fonts: Poppins & Prompt -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome CDN for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. Header & Navigation Bar (Active on Portfolio)
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Ploy Portfolio Homepage">
+        <span class="brand-badge"><i class="fa-solid fa-sparkles"></i></span>
+        <span class="brand-text">Ploy.<span>Portfolio</span></span>
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNavMenu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- Main Navigation Menu -->
+      <nav class="nav-menu" id="mainNavMenu" role="navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="education.html" class="nav-link">Education</a>
+        <a href="portfolio.html" class="nav-link active">Portfolio</a>
+        <a href="activity.html" class="nav-link">Activity</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. Portfolio Page Main Content
+       ========================================================================= -->
+  <main class="page-content">
+    <div class="container">
+      
+      <!-- Page Header -->
+      <div class="page-header reveal-on-scroll">
+        <span class="page-tag"><i class="fa-solid fa-layer-group"></i> Creative Works</span>
+        <h1 class="page-title">Project Showcase <span class="gradient-text">(Portfolio)</span></h1>
+        <p class="page-subtitle">
+          A curated collection of digital media and design projects. Filter by category or click any project to view an enlarged preview and details.
+        </p>
+      </div>
+
+      <!-- Category Filter Buttons (JavaScript Powered) -->
+      <div class="filter-container reveal-on-scroll">
+        <button type="button" class="filter-btn active" data-filter="all">
+          <i class="fa-solid fa-border-all"></i> All Projects
+        </button>
+        <button type="button" class="filter-btn" data-filter="graphic">
+          <i class="fa-solid fa-pen-nib"></i> Graphic
+        </button>
+        <button type="button" class="filter-btn" data-filter="video">
+          <i class="fa-solid fa-video"></i> Video
+        </button>
+        <button type="button" class="filter-btn" data-filter="web">
+          <i class="fa-solid fa-code"></i> Web & UI
+        </button>
+      </div>
+
+      <!-- Portfolio Cards Grid (3 columns desktop, 2 tablet, 1 mobile) -->
+      <div class="portfolio-grid">
+
+        <!-- ===================================================================
+             Project 1 (Category: Graphic)
+             ===================================================================
+             [HOW TO CUSTOMIZE]:
+             1. Replace the image file at src="images/portfolio/portfolio-1.jpg"
+             2. Adjust data-category="graphic" (options: graphic, video, web)
+             3. Update the title in <h3 class="portfolio-title">Project 1</h3>
+             4. Update the short description in <p class="portfolio-desc">
+             5. Update the full description in data-full-desc="..."
+        -->
+        <article class="portfolio-card reveal-on-scroll" data-category="graphic" data-full-desc="Detailed description for Project 1 (To be updated): Creative concept, tools used (e.g. Photoshop, Illustrator), and project objectives.">
+          <div class="portfolio-thumb-wrapper">
+            <img src="images/portfolio/portfolio-1.jpg" alt="Project 1 - Graphic Design" class="portfolio-thumb" loading="lazy">
+            <span class="portfolio-badge">Graphic</span>
+            <div class="portfolio-overlay-hint">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </div>
+          </div>
+          <div class="portfolio-body">
+            <h3 class="portfolio-title">Project 1</h3>
+            <p class="portfolio-desc">
+              Short project description (To be updated, e.g., graphic design poster, branding, or digital illustration).
+            </p>
+            <div class="portfolio-card-footer">
+              <span class="portfolio-view-btn">View Details <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===================================================================
+             Project 2 (Category: Video)
+             ===================================================================
+        -->
+        <article class="portfolio-card reveal-on-scroll" data-category="video" data-full-desc="Detailed description for Project 2 (To be updated): Video production, storyboarding, shooting techniques, and video editing workflow.">
+          <div class="portfolio-thumb-wrapper">
+            <img src="images/portfolio/portfolio-2.jpg" alt="Project 2 - Video Production" class="portfolio-thumb" loading="lazy">
+            <span class="portfolio-badge">Video</span>
+            <div class="portfolio-overlay-hint">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </div>
+          </div>
+          <div class="portfolio-body">
+            <h3 class="portfolio-title">Project 2</h3>
+            <p class="portfolio-desc">
+              Short project description (To be updated, e.g., short clip, motion graphics, or video editing).
+            </p>
+            <div class="portfolio-card-footer">
+              <span class="portfolio-view-btn">View Details <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===================================================================
+             Project 3 (Category: Web & UI)
+             ===================================================================
+        -->
+        <article class="portfolio-card reveal-on-scroll" data-category="web" data-full-desc="Detailed description for Project 3 (To be updated): UI/UX design prototype, wireframing, and responsive web implementation.">
+          <div class="portfolio-thumb-wrapper">
+            <img src="images/portfolio/portfolio-3.jpg" alt="Project 3 - Web & UI Design" class="portfolio-thumb" loading="lazy">
+            <span class="portfolio-badge">Web</span>
+            <div class="portfolio-overlay-hint">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </div>
+          </div>
+          <div class="portfolio-body">
+            <h3 class="portfolio-title">Project 3</h3>
+            <p class="portfolio-desc">
+              Short project description (To be updated, e.g., web interface design, website development, or interactive UI).
+            </p>
+            <div class="portfolio-card-footer">
+              <span class="portfolio-view-btn">View Details <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===================================================================
+             Project 4 (Category: Graphic)
+             ===================================================================
+        -->
+        <article class="portfolio-card reveal-on-scroll" data-category="graphic" data-full-desc="Detailed description for Project 4 (To be updated): Visual identity, promotional banner design, or digital art composition.">
+          <div class="portfolio-thumb-wrapper">
+            <img src="images/portfolio/portfolio-4.jpg" alt="Project 4 - Graphic Design" class="portfolio-thumb" loading="lazy">
+            <span class="portfolio-badge">Graphic</span>
+            <div class="portfolio-overlay-hint">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </div>
+          </div>
+          <div class="portfolio-body">
+            <h3 class="portfolio-title">Project 4</h3>
+            <p class="portfolio-desc">
+              Short project description (To be updated, e.g., infographic, vector illustration, or social media banner).
+            </p>
+            <div class="portfolio-card-footer">
+              <span class="portfolio-view-btn">View Details <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===================================================================
+             Project 5 (Category: Video)
+             ===================================================================
+        -->
+        <article class="portfolio-card reveal-on-scroll" data-category="video" data-full-desc="Detailed description for Project 5 (To be updated): Multimedia project, motion design, audio syncing, and visual effects.">
+          <div class="portfolio-thumb-wrapper">
+            <img src="images/portfolio/portfolio-5.jpg" alt="Project 5 - Creative Video" class="portfolio-thumb" loading="lazy">
+            <span class="portfolio-badge">Video</span>
+            <div class="portfolio-overlay-hint">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </div>
+          </div>
+          <div class="portfolio-body">
+            <h3 class="portfolio-title">Project 5</h3>
+            <p class="portfolio-desc">
+              Short project description (To be updated, e.g., multimedia advertising, class assignment video, or animation).
+            </p>
+            <div class="portfolio-card-footer">
+              <span class="portfolio-view-btn">View Details <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===================================================================
+             Project 6 (Category: Web & UI)
+             ===================================================================
+        -->
+        <article class="portfolio-card reveal-on-scroll" data-category="web" data-full-desc="Detailed description for Project 6 (To be updated): Interactive media, website layout, and creative digital presentation.">
+          <div class="portfolio-thumb-wrapper">
+            <img src="images/portfolio/portfolio-6.jpg" alt="Project 6 - Digital Web Media" class="portfolio-thumb" loading="lazy">
+            <span class="portfolio-badge">Web</span>
+            <div class="portfolio-overlay-hint">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </div>
+          </div>
+          <div class="portfolio-body">
+            <h3 class="portfolio-title">Project 6</h3>
+            <p class="portfolio-desc">
+              Short project description (To be updated, e.g., interactive media, digital web prototype, or user interface).
+            </p>
+            <div class="portfolio-card-footer">
+              <span class="portfolio-view-btn">View Details <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       3. Lightbox / Modal for Large Image & Details
+       ========================================================================= -->
+  <div class="modal-backdrop" id="portfolioModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-container">
+      <!-- Close Button -->
+      <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <div class="modal-image-wrapper">
+        <img src="" alt="Enlarged project preview" class="modal-image">
+      </div>
+      
+      <div class="modal-content-body">
+        <span class="modal-badge">Category</span>
+        <h2 class="modal-title">Project Title</h2>
+        <p class="modal-desc">Project Description</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       4. Footer (Shared across all pages)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        
+        <div class="footer-brand">
+          <h3>Phatcharin Issarawong (Ploy)</h3>
+          <p>Creative Media Student, Faculty of Informatics, Mahasarakham University</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer Navigation">
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="education.html" class="footer-link">Education</a>
+          <a href="portfolio.html" class="footer-link">Portfolio</a>
+          <a href="activity.html" class="footer-link">Activity</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </nav>
+
+        <div class="footer-socials">
+          <a href="#" class="social-icon-btn fb" aria-label="Facebook: Phatcharin Issarawong" title="Facebook: Phatcharin Issarawong">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="contact.html" class="social-icon-btn line" aria-label="Line ID: 0831487543" title="Line ID: 0831487543">
+            <i class="fa-brands fa-line"></i>
+          </a>
+          <a href="mailto:phachrinthrxissrawngs6@gmail.com" class="social-icon-btn email" aria-label="Email: phachrinthrxissrawngs6@gmail.com" title="Email: phachrinthrxissrawngs6@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Phatcharin Issarawong. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>

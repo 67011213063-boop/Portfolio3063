@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Phatcharin Issarawong (Ploy)</title>
+  <meta name="description" content="Contact channels for Phatcharin Issarawong (Ploy): Facebook, Line ID, and Email.">
+  
+  <!-- Google Fonts: Poppins & Prompt -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome CDN for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. Header & Navigation Bar (Active on Contact)
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Ploy Portfolio Homepage">
+        <span class="brand-badge"><i class="fa-solid fa-sparkles"></i></span>
+        <span class="brand-text">Ploy.<span>Portfolio</span></span>
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNavMenu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- Main Navigation Menu -->
+      <nav class="nav-menu" id="mainNavMenu" role="navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="education.html" class="nav-link">Education</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="activity.html" class="nav-link">Activity</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. Contact Page Main Content
+       ========================================================================= -->
+  <main class="page-content">
+    <div class="container">
+      
+      <!-- Page Header -->
+      <div class="page-header reveal-on-scroll">
+        <span class="page-tag"><i class="fa-solid fa-envelope-open-text"></i> Get in Touch</span>
+        <h1 class="page-title">Contact Channels <span class="gradient-text">(Contact Me)</span></h1>
+        <p class="page-subtitle">
+          Interested in my work or looking to discuss creative opportunities? Feel free to connect via any of the channels below.
+        </p>
+      </div>
+
+      <!-- Contact Channels Cards Grid -->
+      <div class="contact-grid">
+
+        <!-- ===================================================================
+             Channel 1: Facebook
+             ===================================================================
+             [HOW TO EDIT FACEBOOK URL]:
+             Replace href="#" below with your real Facebook profile link,
+             e.g., href="https://www.facebook.com/your-username"
+        -->
+        <div class="contact-card facebook reveal-on-scroll">
+          <div class="contact-icon-box" aria-hidden="true">
+            <i class="fa-brands fa-facebook-f"></i>
+          </div>
+          <h2 class="contact-label">Facebook</h2>
+          <p class="contact-value">Phatcharin Issarawong</p>
+          <!-- Facebook Profile Link Button -->
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary contact-action-btn">
+            <i class="fa-brands fa-facebook-f"></i> Visit Facebook
+          </a>
+        </div>
+
+        <!-- ===================================================================
+             Channel 2: Line ID
+             ===================================================================
+             Includes automated copy-to-clipboard functionality powered by JavaScript
+        -->
+        <div class="contact-card line reveal-on-scroll">
+          <div class="contact-icon-box" aria-hidden="true">
+            <i class="fa-brands fa-line"></i>
+          </div>
+          <h2 class="contact-label">Line ID</h2>
+          <p class="contact-value">0831487543</p>
+          <!-- Copy Line ID Button -->
+          <button type="button" class="btn btn-secondary btn-copy contact-action-btn" data-copy-value="0831487543" data-copy-label="Line ID">
+            <i class="fa-regular fa-copy"></i> Copy Line ID
+          </button>
+        </div>
+
+        <!-- ===================================================================
+             Channel 3: Email
+             ===================================================================
+             Includes direct email client link (mailto:) and quick copy button
+        -->
+        <div class="contact-card email reveal-on-scroll">
+          <div class="contact-icon-box" aria-hidden="true">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <h2 class="contact-label">Email</h2>
+          <p class="contact-value">phachrinthrxissrawngs6@gmail.com</p>
+          
+          <div style="display: flex; flex-direction: column; gap: 10px; width: 100%; margin-top: auto;">
+            <!-- Direct Mailto Link -->
+            <a href="mailto:phachrinthrxissrawngs6@gmail.com" class="btn btn-primary contact-action-btn">
+              <i class="fa-solid fa-paper-plane"></i> Send an Email
+            </a>
+            <!-- Copy Email Button -->
+            <button type="button" class="btn btn-secondary btn-copy contact-action-btn" data-copy-value="phachrinthrxissrawngs6@gmail.com" data-copy-label="Email">
+              <i class="fa-regular fa-copy"></i> Copy Email
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       3. Toast Notification (Popup for Copy Feedback)
+       ========================================================================= -->
+  <div class="toast-notice" id="copyToast" role="status" aria-live="polite">
+    <i class="fa-solid fa-circle-check"></i>
+    <span class="toast-msg">Copied to clipboard successfully!</span>
+  </div>
+
+  <!-- =========================================================================
+       4. Footer (Shared across all pages)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        
+        <div class="footer-brand">
+          <h3>Phatcharin Issarawong (Ploy)</h3>
+          <p>Creative Media Student, Faculty of Informatics, Mahasarakham University</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer Navigation">
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="education.html" class="footer-link">Education</a>
+          <a href="portfolio.html" class="footer-link">Portfolio</a>
+          <a href="activity.html" class="footer-link">Activity</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </nav>
+
+        <div class="footer-socials">
+          <a href="#" class="social-icon-btn fb" aria-label="Facebook: Phatcharin Issarawong" title="Facebook: Phatcharin Issarawong">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="contact.html" class="social-icon-btn line" aria-label="Line ID: 0831487543" title="Line ID: 0831487543">
+            <i class="fa-brands fa-line"></i>
+          </a>
+          <a href="mailto:phachrinthrxissrawngs6@gmail.com" class="social-icon-btn email" aria-label="Email: phachrinthrxissrawngs6@gmail.com" title="Email: phachrinthrxissrawngs6@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Phatcharin Issarawong. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>

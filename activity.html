@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity | Phatcharin Issarawong (Ploy)</title>
+  <meta name="description" content="Extracurricular activities and community experiences of Phatcharin Issarawong (Ploy), Creative Media student at the Faculty of Informatics, Mahasarakham University.">
+  
+  <!-- Google Fonts: Poppins & Prompt -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome CDN for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. Header & Navigation Bar (Active on Activity)
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Ploy Portfolio Homepage">
+        <span class="brand-badge"><i class="fa-solid fa-sparkles"></i></span>
+        <span class="brand-text">Ploy.<span>Portfolio</span></span>
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNavMenu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- Main Navigation Menu -->
+      <nav class="nav-menu" id="mainNavMenu" role="navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="education.html" class="nav-link">Education</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="activity.html" class="nav-link active">Activity</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. Activity Page Main Content
+       ========================================================================= -->
+  <main class="page-content">
+    <div class="container">
+      
+      <!-- Page Header -->
+      <div class="page-header reveal-on-scroll">
+        <span class="page-tag"><i class="fa-solid fa-people-roof"></i> Extracurricular Activities</span>
+        <h1 class="page-title">Activities & Experience <span class="gradient-text">(Activity)</span></h1>
+        <p class="page-subtitle">
+          Memorable moments from participating in volunteer community service and department extracurricular events.
+        </p>
+      </div>
+
+      <!-- Activity Cards Grid (Displays clean card layout with photo and activity title) -->
+      <div class="activity-grid">
+
+        <!-- ===================================================================
+             Activity 1: Blood Donation
+             ===================================================================
+             [HOW TO REPLACE PHOTO]:
+             Replace your real activity photo in images/activity/activity-1.jpg
+        -->
+        <article class="activity-card reveal-on-scroll">
+          <div class="activity-img-wrapper">
+            <img src="images/activity/activity-1.jpg" alt="Activity: Blood Donation" class="activity-img" loading="lazy">
+            <span class="activity-badge" title="Voluntary Service">
+              <i class="fa-solid fa-heart-pulse"></i>
+            </span>
+          </div>
+          <div class="activity-body">
+            <h2 class="activity-title">Blood Donation</h2>
+          </div>
+        </article>
+
+        <!-- ===================================================================
+             Activity 2: Educational Fund Donation
+             ===================================================================
+             [HOW TO REPLACE PHOTO]:
+             Replace your real activity photo in images/activity/activity-2.jpg
+        -->
+        <article class="activity-card reveal-on-scroll">
+          <div class="activity-img-wrapper">
+            <img src="images/activity/activity-2.jpg" alt="Activity: Educational Fund Donation" class="activity-img" loading="lazy">
+            <span class="activity-badge" title="Educational Support">
+              <i class="fa-solid fa-hand-holding-heart"></i>
+            </span>
+          </div>
+          <div class="activity-body">
+            <h2 class="activity-title">Educational Fund Donation</h2>
+          </div>
+        </article>
+
+        <!-- ===================================================================
+             Activity 3: Department Sports Day Participation
+             ===================================================================
+             [HOW TO REPLACE PHOTO]:
+             Replace your real activity photo in images/activity/activity-3.jpg
+        -->
+        <article class="activity-card reveal-on-scroll">
+          <div class="activity-img-wrapper">
+            <img src="images/activity/activity-3.jpg" alt="Activity: Department Sports Day Participation" class="activity-img" loading="lazy">
+            <span class="activity-badge" title="Sports & Recreation">
+              <i class="fa-solid fa-trophy"></i>
+            </span>
+          </div>
+          <div class="activity-body">
+            <h2 class="activity-title">Department Sports Day Participation</h2>
+          </div>
+        </article>
+
+        <!--
+          ===================================================================
+          [HOW TO ADD MORE ACTIVITIES]:
+          To add Activity 4, 5..., copy the card markup below and paste it here:
+          
+          <article class="activity-card reveal-on-scroll">
+            <div class="activity-img-wrapper">
+              <img src="images/activity/activity-4.jpg" alt="New Activity Name" class="activity-img" loading="lazy">
+              <span class="activity-badge"><i class="fa-solid fa-star"></i></span>
+            </div>
+            <div class="activity-body">
+              <h2 class="activity-title">New Activity Name</h2>
+            </div>
+          </article>
+          ===================================================================
+        -->
+
+      </div>
+
+      <!-- Instruction Box for Site Owner -->
+      <div class="instruction-box reveal-on-scroll">
+        <i class="fa-solid fa-circle-info"></i>
+        <span><strong>Note for Portfolio Owner:</strong> You can replace the activity photos with your real pictures in the <code>images/activity/</code> folder or duplicate the card markup in this file to add more activities easily.</span>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       3. Footer (Shared across all pages)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        
+        <div class="footer-brand">
+          <h3>Phatcharin Issarawong (Ploy)</h3>
+          <p>Creative Media Student, Faculty of Informatics, Mahasarakham University</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer Navigation">
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="education.html" class="footer-link">Education</a>
+          <a href="portfolio.html" class="footer-link">Portfolio</a>
+          <a href="activity.html" class="footer-link">Activity</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </nav>
+
+        <div class="footer-socials">
+          <a href="#" class="social-icon-btn fb" aria-label="Facebook: Phatcharin Issarawong" title="Facebook: Phatcharin Issarawong">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="contact.html" class="social-icon-btn line" aria-label="Line ID: 0831487543" title="Line ID: 0831487543">
+            <i class="fa-brands fa-line"></i>
+          </a>
+          <a href="mailto:phachrinthrxissrawngs6@gmail.com" class="social-icon-btn email" aria-label="Email: phachrinthrxissrawngs6@gmail.com" title="Email: phachrinthrxissrawngs6@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Phatcharin Issarawong. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>
