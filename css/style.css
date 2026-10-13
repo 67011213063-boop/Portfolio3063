@@ -1,63 +1,66 @@
 /* ==========================================================================
-   PORTFOLIO WEBSITE STYLESHEET
-   เจ้าของผลงาน: Phatcharin Issarawong (Ploy)
-   สาขาสื่อนฤมิต คณะวิทยาการสารสนเทศ มหาวิทยาลัยมหาสารคาม
-   สไตล์: Creative Media / Pastel Soft Gradient / Clean & Modern Responsive
+   PORTFOLIO WEBSITE STYLESHEET (DARK THEME)
+   Owner: Phatcharin Issarawong (Ploy)
+   Faculty of Informatics, Mahasarakham University
+   Theme: Creative Media / Modern Cyber-Pastel Dark Theme / Clean & Responsive
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. ตัวแปรสีและฟอนต์ (CSS Custom Properties)
+   1. CSS Custom Properties (Dark Theme Palette)
    -------------------------------------------------------------------------- */
 :root {
-  /* โทนสีหลัก (Pastel Pink, Purple, Sky Blue) */
-  --primary: #9061f9;          /* ม่วงพาสเทลหลัก */
-  --primary-light: #c084fc;    /* ม่วงอ่อนสว่าง */
-  --primary-soft: #f3e8ff;     /* ม่วงพาสเทลพื้นหลังจางๆ */
+  /* Vibrant Creative Media Accents */
+  --primary: #a855f7;          /* Vibrant Violet / Purple */
+  --primary-light: #c084fc;    /* Light Purple */
+  --primary-soft: rgba(168, 85, 247, 0.16); /* Translucent Purple Glow */
   
-  --secondary: #ec4899;        /* ชมพูพาสเทล */
-  --secondary-light: #f472b6;  /* ชมพูสว่าง */
-  --secondary-soft: #fdf2f8;   /* ชมพูพาสเทลพื้นหลังจางๆ */
+  --secondary: #ec4899;        /* Vibrant Pink / Magenta */
+  --secondary-light: #f472b6;  /* Light Pink */
+  --secondary-soft: rgba(236, 72, 153, 0.16); /* Translucent Pink Glow */
   
-  --accent: #38bdf8;           /* ฟ้าอ่อนพาสเทล */
-  --accent-light: #7dd3fc;     /* ฟ้าอ่อน */
-  --accent-soft: #f0f9ff;      /* ฟ้าพาสเทลพื้นหลังจางๆ */
+  --accent: #38bdf8;           /* Neon Sky Blue */
+  --accent-light: #7dd3fc;     /* Soft Sky Blue */
+  --accent-soft: rgba(56, 189, 248, 0.16);
 
-  /* สีพื้นผิวและข้อความ */
-  --bg-page: #1f374e;
-  --bg-gradient: linear-gradient(135deg, #fdf2f8 0%, #f5f3ff 50%, #f0f9ff 100%);
-  --surface: #ffffff;
-  --surface-glass: rgba(255, 255, 255, 0.85);
-  --surface-card: rgba(255, 255, 255, 0.92);
+  /* Dark Theme Background & Surfaces */
+  --bg-page: #0b0f19;          /* Deep Obsidian / Dark Navy */
+  --bg-gradient: radial-gradient(circle at 15% 15%, rgba(168, 85, 247, 0.14) 0%, transparent 40%),
+                 radial-gradient(circle at 85% 85%, rgba(236, 72, 153, 0.12) 0%, transparent 40%),
+                 radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.09) 0%, transparent 60%),
+                 linear-gradient(180deg, #0b0f19 0%, #0d121f 50%, #090d16 100%);
+  --surface: #111827;          /* Rich Slate Card Surface */
+  --surface-glass: rgba(11, 15, 25, 0.85);
+  --surface-card: rgba(17, 24, 39, 0.88);
   
-  --text-main: #1e293b;        /* ข้อความหลัก สีเทาเข้มคมชัด */
-  --text-muted: #64748b;       /* ข้อความรอง สีเทาคลาสสิก */
-  --text-light: #94a3b8;       /* ข้อความจาง */
-  --border-light: rgba(226, 232, 240, 0.8);
-  --border-glass: rgba(255, 255, 255, 0.8);
+  --text-main: #f8fafc;        /* High-contrast Clean White */
+  --text-muted: #94a3b8;       /* Subtle Slate Gray */
+  --text-light: #64748b;       /* Faded Text */
+  --border-light: rgba(255, 255, 255, 0.09);
+  --border-glass: rgba(255, 255, 255, 0.12);
 
-  /* เงา (Shadows) */
-  --shadow-sm: 0 2px 8px rgba(148, 163, 184, 0.1);
-  --shadow-md: 0 8px 24px -4px rgba(192, 132, 252, 0.12), 0 4px 12px -2px rgba(56, 189, 248, 0.08);
-  --shadow-lg: 0 16px 36px -6px rgba(144, 97, 249, 0.18), 0 8px 16px -4px rgba(236, 72, 153, 0.12);
-  --shadow-glow: 0 0 25px rgba(192, 132, 252, 0.35);
+  /* Dark Mode Shadows & Ambient Glows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px -4px rgba(0, 0, 0, 0.55), 0 4px 12px -2px rgba(168, 85, 247, 0.18);
+  --shadow-lg: 0 16px 36px -6px rgba(0, 0, 0, 0.75), 0 8px 20px -4px rgba(236, 72, 153, 0.22);
+  --shadow-glow: 0 0 30px rgba(168, 85, 247, 0.45);
 
-  /* รัศมีความโค้งมน */
+  /* Border Radii */
   --radius-sm: 10px;
   --radius-md: 16px;
   --radius-lg: 24px;
   --radius-full: 9999px;
 
-  /* ฟอนต์ */
+  /* Typography */
   --font-family: 'Poppins', 'Prompt', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   
-  /* ความเร็ว Transition */
+  /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* --------------------------------------------------------------------------
-   2. Reset & พื้นฐานหน้าเว็บ
+   2. Reset & Base Page Styles
    -------------------------------------------------------------------------- */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -68,6 +71,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  color-scheme: dark;
 }
 
 body {
@@ -75,6 +79,7 @@ body {
   color: var(--text-main);
   background: var(--bg-gradient);
   background-attachment: fixed;
+  background-color: var(--bg-page);
   min-height: 100vh;
   line-height: 1.65;
   display: flex;
@@ -108,7 +113,7 @@ ul, ol {
 }
 
 /* --------------------------------------------------------------------------
-   3. เลย์เอาต์และ Container
+   3. Layout & Containers
    -------------------------------------------------------------------------- */
 .container {
   width: 100%;
@@ -125,7 +130,7 @@ ul, ol {
 }
 
 /* --------------------------------------------------------------------------
-   4. Header & Navigation Bar (ใช้ร่วมกันทุกหน้า)
+   4. Header & Navigation Bar
    -------------------------------------------------------------------------- */
 .site-header {
   position: sticky;
@@ -146,7 +151,7 @@ ul, ol {
   height: 76px;
 }
 
-/* โลโก้ */
+/* Brand Logo */
 .brand-logo {
   display: flex;
   align-items: center;
@@ -162,20 +167,20 @@ ul, ol {
   justify-content: center;
   width: 38px;
   height: 38px;
-  background: linear-gradient(135deg, var(--secondary-light), var(--primary));
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
   color: #ffffff;
   border-radius: 12px;
   font-size: 1rem;
-  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.25);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.35);
 }
 
 .brand-text span {
-  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  background: linear-gradient(135deg, var(--secondary-light), var(--primary-light));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* เมนูหลักบนเดสก์ท็อป */
+/* Desktop Navigation Menu */
 .nav-menu {
   display: flex;
   align-items: center;
@@ -194,19 +199,19 @@ ul, ol {
 }
 
 .nav-link:hover {
-  color: var(--primary);
+  color: var(--primary-light);
   background-color: var(--primary-soft);
 }
 
-/* สถานะ Active ของหน้าปัจจุบัน */
+/* Active State */
 .nav-link.active {
   color: #ffffff;
-  background: linear-gradient(135deg, var(--secondary-light), var(--primary));
-  box-shadow: 0 4px 14px rgba(144, 97, 249, 0.3);
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  box-shadow: 0 4px 16px rgba(168, 85, 247, 0.4);
   font-weight: 600;
 }
 
-/* ปุ่ม Hamburger สำหรับจอมือถือ */
+/* Mobile Hamburger Button */
 .hamburger-btn {
   display: none;
   flex-direction: column;
@@ -230,7 +235,6 @@ ul, ol {
   transition: transform var(--transition-normal), opacity var(--transition-normal);
 }
 
-/* เมื่อเมนูมือถือเปิดอยู่ */
 .hamburger-btn[aria-expanded="true"] .hamburger-line:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
@@ -242,7 +246,7 @@ ul, ol {
 }
 
 /* --------------------------------------------------------------------------
-   5. หัวเรื่องของแต่ละหน้า (Page Header Banner)
+   5. Page Header Banner
    -------------------------------------------------------------------------- */
 .page-header {
   text-align: center;
@@ -256,13 +260,13 @@ ul, ol {
   gap: 6px;
   padding: 6px 16px;
   background: var(--primary-soft);
-  color: var(--primary);
+  color: var(--primary-light);
   border-radius: var(--radius-full);
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.5px;
   margin-bottom: 12px;
-  border: 1px solid rgba(192, 132, 252, 0.3);
+  border: 1px solid rgba(168, 85, 247, 0.3);
 }
 
 .page-title {
@@ -281,16 +285,16 @@ ul, ol {
   margin-right: auto;
 }
 
-/* ข้อความตัวหนังสือแบบ Gradient */
+/* Gradient Text Effect */
 .gradient-text {
-  background: linear-gradient(135deg, var(--secondary), var(--primary), var(--accent));
+  background: linear-gradient(135deg, var(--secondary-light), var(--primary-light), var(--accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
 
 /* --------------------------------------------------------------------------
-   6. ปุ่ม (Buttons)
+   6. Buttons
    -------------------------------------------------------------------------- */
 .btn {
   display: inline-flex;
@@ -306,28 +310,29 @@ ul, ol {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--secondary-light), var(--primary));
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
   color: #ffffff;
-  box-shadow: 0 6px 20px rgba(144, 97, 249, 0.28);
+  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.35);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(144, 97, 249, 0.38);
+  box-shadow: 0 10px 25px rgba(168, 85, 247, 0.5);
   color: #ffffff;
 }
 
 .btn-secondary {
-  background: var(--surface);
+  background: rgba(255, 255, 255, 0.06);
   color: var(--text-main);
   border: 1px solid var(--border-light);
   box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(8px);
 }
 
 .btn-secondary:hover {
   background: var(--primary-soft);
-  color: var(--primary);
-  border-color: var(--primary-light);
+  color: var(--primary-light);
+  border-color: var(--primary);
   transform: translateY(-3px);
   box-shadow: var(--shadow-md);
 }
@@ -338,7 +343,7 @@ ul, ol {
 }
 
 /* --------------------------------------------------------------------------
-   7. สไตล์เฉพาะหน้า HOME (index.html)
+   7. Home Page Specific Styles
    -------------------------------------------------------------------------- */
 .hero-section {
   padding: 40px 0 60px 0;
@@ -361,12 +366,12 @@ ul, ol {
   gap: 8px;
   padding: 6px 18px;
   background: var(--secondary-soft);
-  color: var(--secondary);
+  color: var(--secondary-light);
   border-radius: var(--radius-full);
   font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: 20px;
-  border: 1px solid rgba(244, 114, 182, 0.25);
+  border: 1px solid rgba(236, 72, 153, 0.3);
 }
 
 .hero-greeting {
@@ -379,7 +384,7 @@ ul, ol {
 .hero-name {
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--primary);
+  color: var(--primary-light);
   margin-bottom: 12px;
 }
 
@@ -387,11 +392,12 @@ ul, ol {
   display: inline-block;
   padding: 6px 14px;
   background: var(--primary-soft);
-  color: var(--primary);
+  color: var(--primary-light);
   border-radius: var(--radius-sm);
   font-size: 0.92rem;
   font-weight: 500;
   margin-bottom: 18px;
+  border: 1px solid rgba(168, 85, 247, 0.25);
 }
 
 .hero-desc {
@@ -407,7 +413,7 @@ ul, ol {
   flex-wrap: wrap;
 }
 
-/* ส่วนรูปโปรไฟล์ */
+/* Hero Profile Avatar */
 .hero-avatar-wrapper {
   position: relative;
   display: flex;
@@ -420,8 +426,8 @@ ul, ol {
   width: 340px;
   height: 340px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(244, 114, 182, 0.35), rgba(192, 132, 252, 0.35), rgba(56, 189, 248, 0.3));
-  filter: blur(35px);
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.4), rgba(168, 85, 247, 0.45), rgba(56, 189, 248, 0.35));
+  filter: blur(40px);
   z-index: 1;
   animation: floatGlow 6s ease-in-out infinite alternate;
 }
@@ -433,7 +439,8 @@ ul, ol {
   height: 320px;
   border-radius: 36px;
   padding: 8px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(244, 114, 182, 0.5), rgba(192, 132, 252, 0.6));
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(236, 72, 153, 0.4), rgba(168, 85, 247, 0.5));
+  border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: var(--shadow-lg);
   transform: rotate(-2deg);
   transition: transform var(--transition-slow);
@@ -451,11 +458,11 @@ ul, ol {
   background-color: var(--surface);
 }
 
-/* การ์ดทางลัดบนหน้า Home (Shortcut Cards) */
+/* Shortcut Cards */
 .shortcuts-section {
   margin-top: 60px;
   padding-top: 50px;
-  border-top: 1px dashed rgba(203, 213, 225, 0.8);
+  border-top: 1px dashed rgba(255, 255, 255, 0.12);
 }
 
 .section-header-center {
@@ -492,6 +499,7 @@ ul, ol {
   text-align: center;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(12px);
 }
 
 .shortcut-card::before {
@@ -501,7 +509,7 @@ ul, ol {
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--secondary-light), var(--primary), var(--accent));
+  background: linear-gradient(90deg, var(--secondary), var(--primary), var(--accent));
   opacity: 0;
   transition: opacity var(--transition-fast);
 }
@@ -509,7 +517,7 @@ ul, ol {
 .shortcut-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-lg);
-  border-color: var(--primary-light);
+  border-color: rgba(168, 85, 247, 0.5);
 }
 
 .shortcut-card:hover::before {
@@ -526,7 +534,7 @@ ul, ol {
   justify-content: center;
   font-size: 1.6rem;
   background: var(--primary-soft);
-  color: var(--primary);
+  color: var(--primary-light);
   transition: transform var(--transition-normal);
 }
 
@@ -535,17 +543,17 @@ ul, ol {
 }
 
 .shortcut-card.education .shortcut-icon {
-  background: #fdf2f8;
-  color: var(--secondary);
+  background: rgba(236, 72, 153, 0.15);
+  color: var(--secondary-light);
 }
 
 .shortcut-card.activity .shortcut-icon {
-  background: #f0fdf4;
-  color: #10b981;
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
 }
 
 .shortcut-card.contact .shortcut-icon {
-  background: #f0f9ff;
+  background: rgba(56, 189, 248, 0.15);
   color: var(--accent);
 }
 
@@ -566,14 +574,14 @@ ul, ol {
 .shortcut-link-text {
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--primary);
+  color: var(--primary-light);
   display: inline-flex;
   align-items: center;
   gap: 6px;
 }
 
 /* --------------------------------------------------------------------------
-   8. สไตล์หน้า EDUCATION (education.html) - Vertical Timeline
+   8. Education Timeline Styles
    -------------------------------------------------------------------------- */
 .timeline-wrapper {
   max-width: 820px;
@@ -582,7 +590,7 @@ ul, ol {
   padding: 20px 0;
 }
 
-/* เส้น Timeline แนวตั้ง */
+/* Vertical Timeline Track */
 .timeline-wrapper::before {
   content: '';
   position: absolute;
@@ -590,8 +598,9 @@ ul, ol {
   bottom: 30px;
   left: 38px;
   width: 4px;
-  background: linear-gradient(180deg, var(--secondary-light), var(--primary), var(--accent));
+  background: linear-gradient(180deg, var(--secondary), var(--primary), var(--accent));
   border-radius: 4px;
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.35);
 }
 
 .timeline-item {
@@ -606,7 +615,6 @@ ul, ol {
   margin-bottom: 0;
 }
 
-/* วงกลมไอคอนจุด Timeline */
 .timeline-marker {
   position: relative;
   z-index: 2;
@@ -614,14 +622,14 @@ ul, ol {
   height: 76px;
   flex-shrink: 0;
   border-radius: 50%;
-  background: var(--surface);
-  border: 4px solid #ffffff;
+  background: #111827;
+  border: 4px solid #1e293b;
   box-shadow: var(--shadow-md);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.6rem;
-  color: var(--primary);
+  color: var(--primary-light);
   transition: transform var(--transition-normal);
 }
 
@@ -631,12 +639,12 @@ ul, ol {
 }
 
 .timeline-item.current .timeline-marker {
-  background: linear-gradient(135deg, var(--secondary-light), var(--primary));
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
   color: #ffffff;
-  box-shadow: 0 0 20px rgba(144, 97, 249, 0.4);
+  border-color: #111827;
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.55);
 }
 
-/* การ์ดเนื้อหา Timeline */
 .timeline-card {
   flex-grow: 1;
   background: var(--surface-card);
@@ -645,12 +653,13 @@ ul, ol {
   border: 1px solid var(--border-light);
   box-shadow: var(--shadow-md);
   transition: all var(--transition-normal);
+  backdrop-filter: blur(12px);
 }
 
 .timeline-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
-  border-color: var(--primary-light);
+  border-color: rgba(168, 85, 247, 0.5);
 }
 
 .timeline-header {
@@ -673,24 +682,14 @@ ul, ol {
 }
 
 .timeline-badge.current {
-  background: #fdf2f8;
-  color: var(--secondary);
-  border: 1px solid rgba(244, 114, 182, 0.3);
+  background: rgba(236, 72, 153, 0.18);
+  color: var(--secondary-light);
+  border: 1px solid rgba(236, 72, 153, 0.35);
 }
 
 .timeline-badge.completed {
-  background: #f1f5f9;
+  background: rgba(255, 255, 255, 0.08);
   color: var(--text-muted);
-}
-
-.timeline-year-tag {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--text-muted);
-  background: var(--bg-page);
-  padding: 4px 12px;
-  border-radius: var(--radius-sm);
-  border: 1px dashed #cbd5e1;
 }
 
 .timeline-institution {
@@ -703,7 +702,7 @@ ul, ol {
 .timeline-major {
   font-size: 1.05rem;
   font-weight: 500;
-  color: var(--primary);
+  color: var(--primary-light);
   margin-bottom: 16px;
 }
 
@@ -712,7 +711,7 @@ ul, ol {
   flex-wrap: wrap;
   gap: 16px;
   padding-top: 16px;
-  border-top: 1px solid #f1f5f9;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .meta-pill {
@@ -721,24 +720,15 @@ ul, ol {
   gap: 8px;
   font-size: 0.88rem;
   color: var(--text-muted);
-  background: var(--bg-page);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   padding: 6px 14px;
   border-radius: var(--radius-sm);
 }
 
-.placeholder-notice {
-  color: #d97706; /* สีส้มเตือนตา */
-  background: #fef3c7;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-weight: 500;
-  font-size: 0.82rem;
-}
-
 /* --------------------------------------------------------------------------
-   9. สไตล์หน้า PORTFOLIO (portfolio.html)
+   9. Portfolio Page Styles
    -------------------------------------------------------------------------- */
-/* ตัวกรองหมวดหมู่ (Filter Buttons) */
 .filter-container {
   display: flex;
   justify-content: center;
@@ -760,19 +750,19 @@ ul, ol {
 }
 
 .filter-btn:hover {
-  color: var(--primary);
+  color: var(--primary-light);
   background: var(--primary-soft);
-  border-color: var(--primary-light);
+  border-color: rgba(168, 85, 247, 0.4);
 }
 
 .filter-btn.active {
-  background: linear-gradient(135deg, var(--secondary-light), var(--primary));
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
   color: #ffffff;
   border-color: transparent;
-  box-shadow: 0 4px 14px rgba(144, 97, 249, 0.3);
+  box-shadow: 0 4px 16px rgba(168, 85, 247, 0.4);
 }
 
-/* Portfolio Cards Grid */
+/* Portfolio Grid */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -789,12 +779,13 @@ ul, ol {
   flex-direction: column;
   transition: all var(--transition-normal);
   cursor: pointer;
+  backdrop-filter: blur(12px);
 }
 
 .portfolio-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-lg);
-  border-color: var(--primary-light);
+  border-color: rgba(168, 85, 247, 0.5);
 }
 
 .portfolio-card.is-hidden {
@@ -806,7 +797,7 @@ ul, ol {
   width: 100%;
   aspect-ratio: 16 / 10;
   overflow: hidden;
-  background-color: var(--primary-soft);
+  background-color: #0b0f19;
 }
 
 .portfolio-thumb {
@@ -828,9 +819,10 @@ ul, ol {
   border-radius: var(--radius-full);
   font-size: 0.78rem;
   font-weight: 600;
-  color: #ffffff;
-  background: rgba(30, 41, 59, 0.75);
+  color: var(--text-main);
+  background: rgba(11, 15, 25, 0.85);
   backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -838,7 +830,7 @@ ul, ol {
 .portfolio-overlay-hint {
   position: absolute;
   inset: 0;
-  background: rgba(144, 97, 249, 0.35);
+  background: rgba(168, 85, 247, 0.35);
   backdrop-filter: blur(2px);
   display: flex;
   align-items: center;
@@ -872,7 +864,7 @@ ul, ol {
 }
 
 .portfolio-card:hover .portfolio-title {
-  color: var(--primary);
+  color: var(--primary-light);
 }
 
 .portfolio-view-icon {
@@ -880,30 +872,30 @@ ul, ol {
   height: 36px;
   border-radius: 50%;
   background: var(--primary-soft);
-  color: var(--primary);
+  color: var(--primary-light);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.9rem;
   flex-shrink: 0;
   transition: all var(--transition-normal);
-  border: 1px solid rgba(192, 132, 252, 0.25);
+  border: 1px solid rgba(168, 85, 247, 0.3);
 }
 
 .portfolio-card:hover .portfolio-view-icon {
-  background: linear-gradient(135deg, var(--secondary-light), var(--primary));
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
   color: #ffffff;
   transform: translateX(4px) scale(1.05);
-  box-shadow: 0 4px 12px rgba(144, 97, 249, 0.3);
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.4);
 }
 
 /* --------------------------------------------------------------------------
-   10. สไตล์ Lightbox / Modal สำหรับดูภาพผลงาน
+   10. Lightbox Modal Styles
    -------------------------------------------------------------------------- */
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(15, 23, 42, 0.65);
+  background: rgba(5, 8, 15, 0.85);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   z-index: 2000;
@@ -922,13 +914,14 @@ ul, ol {
 }
 
 .modal-container {
-  background: var(--surface);
+  background: #111827;
   border-radius: var(--radius-lg);
   max-width: 800px;
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65);
   position: relative;
   transform: scale(0.92) translateY(20px);
   transition: transform var(--transition-normal);
@@ -945,8 +938,8 @@ ul, ol {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: var(--surface);
-  border: 1px solid var(--border-light);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -959,15 +952,16 @@ ul, ol {
 }
 
 .modal-close-btn:hover {
-  background: #fee2e2;
-  color: #ef4444;
+  background: #ef4444;
+  color: #ffffff;
+  border-color: #ef4444;
   transform: rotate(90deg);
 }
 
 .modal-image-wrapper {
   width: 100%;
   max-height: 480px;
-  background: #0f172a;
+  background: #0b0f19;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -991,7 +985,8 @@ ul, ol {
   font-size: 0.82rem;
   font-weight: 600;
   background: var(--primary-soft);
-  color: var(--primary);
+  color: var(--primary-light);
+  border: 1px solid rgba(168, 85, 247, 0.3);
   margin-bottom: 12px;
 }
 
@@ -1010,7 +1005,7 @@ ul, ol {
 }
 
 /* --------------------------------------------------------------------------
-   11. สไตล์หน้า ACTIVITY (activity.html)
+   11. Activity Page Styles
    -------------------------------------------------------------------------- */
 .activity-grid {
   display: grid;
@@ -1027,12 +1022,13 @@ ul, ol {
   transition: all var(--transition-normal);
   display: flex;
   flex-direction: column;
+  backdrop-filter: blur(12px);
 }
 
 .activity-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-lg);
-  border-color: var(--secondary-light);
+  border-color: rgba(236, 72, 153, 0.5);
 }
 
 .activity-img-wrapper {
@@ -1040,7 +1036,7 @@ ul, ol {
   width: 100%;
   aspect-ratio: 16 / 11;
   overflow: hidden;
-  background-color: var(--primary-soft);
+  background-color: #0b0f19;
 }
 
 .activity-img {
@@ -1061,12 +1057,13 @@ ul, ol {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(17, 24, 39, 0.85);
   backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--secondary);
+  color: var(--secondary-light);
   font-size: 0.95rem;
   box-shadow: var(--shadow-sm);
 }
@@ -1087,20 +1084,8 @@ ul, ol {
   line-height: 1.5;
 }
 
-/* กล่องคำแนะนำสำหรับผู้ใช้ในการเพิ่มกิจกรรม */
-.instruction-box {
-  margin-top: 50px;
-  padding: 20px 24px;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px dashed rgba(144, 97, 249, 0.4);
-  border-radius: var(--radius-md);
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--text-muted);
-}
-
 /* --------------------------------------------------------------------------
-   12. สไตล์หน้า CONTACT (contact.html)
+   12. Contact Page Styles
    -------------------------------------------------------------------------- */
 .contact-grid {
   display: grid;
@@ -1121,6 +1106,7 @@ ul, ol {
   align-items: center;
   transition: all var(--transition-normal);
   position: relative;
+  backdrop-filter: blur(12px);
 }
 
 .contact-card:hover {
@@ -1129,15 +1115,18 @@ ul, ol {
 }
 
 .contact-card.facebook:hover {
-  border-color: #1877f2;
+  border-color: #3b82f6;
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.3);
 }
 
 .contact-card.line:hover {
-  border-color: #06c755;
+  border-color: #10b981;
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.3);
 }
 
 .contact-card.email:hover {
-  border-color: #ea4335;
+  border-color: #f87171;
+  box-shadow: 0 0 25px rgba(248, 113, 113, 0.3);
 }
 
 .contact-icon-box {
@@ -1157,18 +1146,21 @@ ul, ol {
 }
 
 .contact-card.facebook .contact-icon-box {
-  background: #e7f3ff;
-  color: #1877f2;
+  background: rgba(59, 130, 246, 0.16);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.25);
 }
 
 .contact-card.line .contact-icon-box {
-  background: #e6f9ed;
-  color: #06c755;
+  background: rgba(16, 185, 129, 0.16);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.25);
 }
 
 .contact-card.email .contact-icon-box {
-  background: #fef2f2;
-  color: #ea4335;
+  background: rgba(239, 68, 68, 0.16);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.25);
 }
 
 .contact-label {
@@ -1191,16 +1183,17 @@ ul, ol {
   width: 100%;
 }
 
-/* Toast แจ้งเตือนเมื่อคัดลอกสำเร็จ */
+/* Toast Notification */
 .toast-notice {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background: #0f172a;
+  background: #1e293b;
   color: #ffffff;
   padding: 14px 24px;
   border-radius: var(--radius-full);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1218,11 +1211,11 @@ ul, ol {
 }
 
 .toast-notice i {
-  color: #4ade80; /* สีเขียวสำเร็จ */
+  color: #4ade80;
 }
 
 /* --------------------------------------------------------------------------
-   13. Footer (ใช้ร่วมกันทุกหน้า)
+   13. Footer
    -------------------------------------------------------------------------- */
 .site-footer {
   background: var(--surface-glass);
@@ -1240,7 +1233,7 @@ ul, ol {
   flex-wrap: wrap;
   gap: 24px;
   padding-bottom: 36px;
-  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .footer-brand h3 {
@@ -1255,7 +1248,6 @@ ul, ol {
   color: var(--text-muted);
 }
 
-/* ลิงก์นำทางใน Footer */
 .footer-nav {
   display: flex;
   gap: 20px;
@@ -1270,10 +1262,9 @@ ul, ol {
 }
 
 .footer-link:hover {
-  color: var(--primary);
+  color: var(--primary-light);
 }
 
-/* ไอคอนโซเชียลใน Footer */
 .footer-socials {
   display: flex;
   gap: 12px;
@@ -1283,8 +1274,8 @@ ul, ol {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: var(--surface);
-  border: 1px solid var(--border-light);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1296,23 +1287,21 @@ ul, ol {
 .social-icon-btn:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-sm);
+  color: #ffffff;
 }
 
 .social-icon-btn.fb:hover {
   background: #1877f2;
-  color: #ffffff;
   border-color: #1877f2;
 }
 
 .social-icon-btn.line:hover {
   background: #06c755;
-  color: #ffffff;
   border-color: #06c755;
 }
 
 .social-icon-btn.email:hover {
   background: #ea4335;
-  color: #ffffff;
   border-color: #ea4335;
 }
 
@@ -1324,7 +1313,7 @@ ul, ol {
 }
 
 /* --------------------------------------------------------------------------
-   14. เอฟเฟกต์แอนิเมชัน (Animations & Scroll Reveal)
+   14. Animations
    -------------------------------------------------------------------------- */
 @keyframes floatGlow {
   0% {
@@ -1347,9 +1336,8 @@ ul, ol {
 }
 
 /* --------------------------------------------------------------------------
-   15. Responsive Design (สำหรับมือถือและแท็บเล็ต)
+   15. Responsive Design
    -------------------------------------------------------------------------- */
-/* แท็บเล็ตขนาดกลางและใหญ่ (Max 992px) */
 @media (max-width: 992px) {
   .hero-grid {
     grid-template-columns: 1fr;
@@ -1395,7 +1383,6 @@ ul, ol {
   }
 }
 
-/* แท็บเล็ตเล็กและจอมือถือ (Max 768px) */
 @media (max-width: 768px) {
   .nav-container {
     height: 68px;
@@ -1405,13 +1392,12 @@ ul, ol {
     display: flex;
   }
 
-  /* เมนูมือถือแบบเลื่อนลง */
   .nav-menu {
     position: fixed;
     top: 68px;
     left: 0;
     right: 0;
-    background: var(--surface);
+    background: rgba(17, 24, 39, 0.96);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
@@ -1472,7 +1458,6 @@ ul, ol {
     grid-template-columns: 1fr;
   }
 
-  /* ปรับ Timeline บนมือถือ */
   .timeline-wrapper::before {
     left: 24px;
   }
@@ -1496,7 +1481,6 @@ ul, ol {
   }
 }
 
-/* จอมือถือขนาดกะทัดรัด (Max 480px) */
 @media (max-width: 480px) {
   .container {
     padding-left: 18px;
@@ -1521,4 +1505,3 @@ ul, ol {
     height: 220px;
   }
 }
-
