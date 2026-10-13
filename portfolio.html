@@ -58,7 +58,7 @@
         <span class="page-tag"><i class="fa-solid fa-layer-group"></i> Creative Works</span>
         <h1 class="page-title">Project Showcase <span class="gradient-text">(Portfolio)</span></h1>
         <p class="page-subtitle">
-          A curated collection of digital media and design projects. Filter by category or click any project to view an enlarged preview and details.
+          รวมผลงานการออกแบบและสื่อสร้างสรรค์ คลิกที่การ์ดเพื่อเปิดดูภาพขยายและรายละเอียดโปรเจกต์
         </p>
       </div>
 
@@ -67,160 +67,133 @@
         <button type="button" class="filter-btn active" data-filter="all">
           <i class="fa-solid fa-border-all"></i> All Projects
         </button>
-        <button type="button" class="filter-btn" data-filter="graphic">
-          <i class="fa-solid fa-pen-nib"></i> Graphic
+        <button type="button" class="filter-btn" data-filter="design">
+          <i class="fa-solid fa-pen-nib"></i> Design
         </button>
         <button type="button" class="filter-btn" data-filter="video">
           <i class="fa-solid fa-video"></i> Video
         </button>
-        <button type="button" class="filter-btn" data-filter="web">
-          <i class="fa-solid fa-code"></i> Web & UI
-        </button>
       </div>
 
-      <!-- Portfolio Cards Grid (3 columns desktop, 2 tablet, 1 mobile) -->
+      <!-- Portfolio Cards Grid: แสดงรูปภาพเด่นชัด และมีเฉพาะชื่อโปรเจกต์ตามที่ต้องการ -->
       <div class="portfolio-grid">
 
         <!-- ===================================================================
-             Project 1 (Category: Graphic)
-             ===================================================================
-             [HOW TO CUSTOMIZE]:
-             1. Replace the image file at src="images/portfolio/portfolio-1.jpg"
-             2. Adjust data-category="graphic" (options: graphic, video, web)
-             3. Update the title in <h3 class="portfolio-title">Project 1</h3>
-             4. Update the short description in <p class="portfolio-desc">
-             5. Update the full description in data-full-desc="..."
-        -->
-        <article class="portfolio-card reveal-on-scroll" data-category="graphic" data-full-desc="Detailed description for Project 1 (To be updated): Creative concept, tools used (e.g. Photoshop, Illustrator), and project objectives.">
+             โปรเจกต์ที่ 1: ออกแบบบแอพ (App Design)
+             [คำแนะนำ]: สามารถใส่รายละเอียดโปรเจกต์ใน data-full-desc="..." ด้านล่างนี้ได้ภายหลัง
+             =================================================================== -->
+        <article class="portfolio-card reveal-on-scroll" data-category="design" data-full-desc="ออกแบบบแอพ (App Design) - รายละเอียดของโปรเจกต์ (ใส่ข้อมูลเพิ่มเติมภายหลัง เช่น แนวคิดการออกแบบ UI/UX, โปรแกรมที่ใช้ Figma/Adobe XD, และฟังก์ชันของแอปพลิเคชัน)">
           <div class="portfolio-thumb-wrapper">
-            <img src="images/portfolio/portfolio-1.jpg" alt="Project 1 - Graphic Design" class="portfolio-thumb" loading="lazy">
-            <span class="portfolio-badge">Graphic</span>
+            <img src="images/portfolio/ออกแบบบแอพ.png" alt="ออกแบบบแอพ" class="portfolio-thumb" loading="lazy">
+            <span class="portfolio-badge">Design</span>
             <div class="portfolio-overlay-hint">
               <i class="fa-solid fa-magnifying-glass-plus"></i>
             </div>
           </div>
           <div class="portfolio-body">
-            <h3 class="portfolio-title">Project 1</h3>
-            <p class="portfolio-desc">
-              Short project description (To be updated, e.g., graphic design poster, branding, or digital illustration).
-            </p>
-            <div class="portfolio-card-footer">
-              <span class="portfolio-view-btn">View Details <i class="fa-solid fa-arrow-right"></i></span>
+            <h3 class="portfolio-title">ออกแบบบแอพ</h3>
+            <div class="portfolio-view-icon" aria-hidden="true">
+              <i class="fa-solid fa-arrow-right"></i>
             </div>
           </div>
         </article>
 
         <!-- ===================================================================
-             Project 2 (Category: Video)
-             ===================================================================
-        -->
-        <article class="portfolio-card reveal-on-scroll" data-category="video" data-full-desc="Detailed description for Project 2 (To be updated): Video production, storyboarding, shooting techniques, and video editing workflow.">
+             โปรเจกต์ที่ 2: ออกแบบตัวละคร (Character Design)
+             [คำแนะนำ]: สามารถใส่รายละเอียดโปรเจกต์ใน data-full-desc="..." ด้านล่างนี้ได้ภายหลัง
+             =================================================================== -->
+        <article class="portfolio-card reveal-on-scroll" data-category="design" data-full-desc="ออกแบบตัวละคร (Character Design) - รายละเอียดของโปรเจกต์ (ใส่ข้อมูลเพิ่มเติมภายหลัง เช่น คอนเซปต์ตัวละคร, สไตล์การวาด, และเครื่องมือที่ใช้)">
           <div class="portfolio-thumb-wrapper">
-            <img src="images/portfolio/portfolio-2.jpg" alt="Project 2 - Video Production" class="portfolio-thumb" loading="lazy">
+            <img src="images/portfolio/ออกแบบตัวละคร.png" alt="ออกแบบตัวละคร" class="portfolio-thumb" loading="lazy">
+            <span class="portfolio-badge">Design</span>
+            <div class="portfolio-overlay-hint">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </div>
+          </div>
+          <div class="portfolio-body">
+            <h3 class="portfolio-title">ออกแบบตัวละคร</h3>
+            <div class="portfolio-view-icon" aria-hidden="true">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===================================================================
+             โปรเจกต์ที่ 3: ออกแบบโลโก้ (Logo Design)
+             [คำแนะนำ]: สามารถใส่รายละเอียดโปรเจกต์ใน data-full-desc="..." ด้านล่างนี้ได้ภายหลัง
+             =================================================================== -->
+        <article class="portfolio-card reveal-on-scroll" data-category="design" data-full-desc="ออกแบบโลโก้ (Logo Design) - รายละเอียดของโปรเจกต์ (ใส่ข้อมูลเพิ่มเติมภายหลัง เช่น ความหมายและอัตลักษณ์ของโลโก้, ทฤษฎีสีที่เลือกใช้)">
+          <div class="portfolio-thumb-wrapper">
+            <img src="images/portfolio/ออกแบบโลโก้.png" alt="ออกแบบโลโก้" class="portfolio-thumb" loading="lazy">
+            <span class="portfolio-badge">Design</span>
+            <div class="portfolio-overlay-hint">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </div>
+          </div>
+          <div class="portfolio-body">
+            <h3 class="portfolio-title">ออกแบบโลโก้</h3>
+            <div class="portfolio-view-icon" aria-hidden="true">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===================================================================
+             โปรเจกต์ที่ 4: ออกแบบอาวุธ (Weapon Design)
+             [คำแนะนำ]: สามารถใส่รายละเอียดโปรเจกต์ใน data-full-desc="..." ด้านล่างนี้ได้ภายหลัง
+             =================================================================== -->
+        <article class="portfolio-card reveal-on-scroll" data-category="design" data-full-desc="ออกแบบอาวุธ (Weapon Design) - รายละเอียดของโปรเจกต์ (ใส่ข้อมูลเพิ่มเติมภายหลัง เช่น ไอเดียการออกแบบสำหรับ Game Asset, การปั้นโมเดลหรือเรนเดอร์ภาพ)">
+          <div class="portfolio-thumb-wrapper">
+            <img src="images/portfolio/ออกแบบอาวุธ.png" alt="ออกแบบอาวุธ" class="portfolio-thumb" loading="lazy">
+            <span class="portfolio-badge">Design</span>
+            <div class="portfolio-overlay-hint">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </div>
+          </div>
+          <div class="portfolio-body">
+            <h3 class="portfolio-title">ออกแบบอาวุธ</h3>
+            <div class="portfolio-view-icon" aria-hidden="true">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===================================================================
+             โปรเจกต์ที่ 5: ออกกองถ่าย MV (Music Video Production)
+             [คำแนะนำ]: สามารถใส่รายละเอียดโปรเจกต์ใน data-full-desc="..." ด้านล่างนี้ได้ภายหลัง
+             =================================================================== -->
+        <article class="portfolio-card reveal-on-scroll" data-category="video" data-full-desc="ออกกองถ่าย MV (Music Video Production) - รายละเอียดของโปรเจกต์ (ใส่ข้อมูลเพิ่มเติมภายหลัง เช่น บทบาทหน้าที่ในกองถ่าย, การถ่ายทำ, และการตัดต่อมิวสิกวิดีโอ)">
+          <div class="portfolio-thumb-wrapper">
+            <img src="images/portfolio/ออกกองถ่ายMV.png" alt="ออกกองถ่าย MV" class="portfolio-thumb" loading="lazy">
             <span class="portfolio-badge">Video</span>
             <div class="portfolio-overlay-hint">
               <i class="fa-solid fa-magnifying-glass-plus"></i>
             </div>
           </div>
           <div class="portfolio-body">
-            <h3 class="portfolio-title">Project 2</h3>
-            <p class="portfolio-desc">
-              Short project description (To be updated, e.g., short clip, motion graphics, or video editing).
-            </p>
-            <div class="portfolio-card-footer">
-              <span class="portfolio-view-btn">View Details <i class="fa-solid fa-arrow-right"></i></span>
+            <h3 class="portfolio-title">ออกกองถ่าย MV</h3>
+            <div class="portfolio-view-icon" aria-hidden="true">
+              <i class="fa-solid fa-arrow-right"></i>
             </div>
           </div>
         </article>
 
         <!-- ===================================================================
-             Project 3 (Category: Web & UI)
-             ===================================================================
-        -->
-        <article class="portfolio-card reveal-on-scroll" data-category="web" data-full-desc="Detailed description for Project 3 (To be updated): UI/UX design prototype, wireframing, and responsive web implementation.">
+             โปรเจกต์ที่ 6: วิดีโอโฆษณา (Commercial Video)
+             [คำแนะนำ]: สามารถใส่รายละเอียดโปรเจกต์ใน data-full-desc="..." ด้านล่างนี้ได้ภายหลัง
+             =================================================================== -->
+        <article class="portfolio-card reveal-on-scroll" data-category="video" data-full-desc="วิดีโอโฆษณา (Commercial Video) - รายละเอียดของโปรเจกต์ (ใส่ข้อมูลเพิ่มเติมภายหลัง เช่น แนวคิดการเล่าเรื่องโฆษณา, การตัดต่อ Premiere Pro/After Effects, และการใส่เสียง)">
           <div class="portfolio-thumb-wrapper">
-            <img src="images/portfolio/portfolio-3.jpg" alt="Project 3 - Web & UI Design" class="portfolio-thumb" loading="lazy">
-            <span class="portfolio-badge">Web</span>
-            <div class="portfolio-overlay-hint">
-              <i class="fa-solid fa-magnifying-glass-plus"></i>
-            </div>
-          </div>
-          <div class="portfolio-body">
-            <h3 class="portfolio-title">Project 3</h3>
-            <p class="portfolio-desc">
-              Short project description (To be updated, e.g., web interface design, website development, or interactive UI).
-            </p>
-            <div class="portfolio-card-footer">
-              <span class="portfolio-view-btn">View Details <i class="fa-solid fa-arrow-right"></i></span>
-            </div>
-          </div>
-        </article>
-
-        <!-- ===================================================================
-             Project 4 (Category: Graphic)
-             ===================================================================
-        -->
-        <article class="portfolio-card reveal-on-scroll" data-category="graphic" data-full-desc="Detailed description for Project 4 (To be updated): Visual identity, promotional banner design, or digital art composition.">
-          <div class="portfolio-thumb-wrapper">
-            <img src="images/portfolio/portfolio-4.jpg" alt="Project 4 - Graphic Design" class="portfolio-thumb" loading="lazy">
-            <span class="portfolio-badge">Graphic</span>
-            <div class="portfolio-overlay-hint">
-              <i class="fa-solid fa-magnifying-glass-plus"></i>
-            </div>
-          </div>
-          <div class="portfolio-body">
-            <h3 class="portfolio-title">Project 4</h3>
-            <p class="portfolio-desc">
-              Short project description (To be updated, e.g., infographic, vector illustration, or social media banner).
-            </p>
-            <div class="portfolio-card-footer">
-              <span class="portfolio-view-btn">View Details <i class="fa-solid fa-arrow-right"></i></span>
-            </div>
-          </div>
-        </article>
-
-        <!-- ===================================================================
-             Project 5 (Category: Video)
-             ===================================================================
-        -->
-        <article class="portfolio-card reveal-on-scroll" data-category="video" data-full-desc="Detailed description for Project 5 (To be updated): Multimedia project, motion design, audio syncing, and visual effects.">
-          <div class="portfolio-thumb-wrapper">
-            <img src="images/portfolio/portfolio-5.jpg" alt="Project 5 - Creative Video" class="portfolio-thumb" loading="lazy">
+            <img src="images/portfolio/วิดีโอโฆษณา.png" alt="วิดีโอโฆษณา" class="portfolio-thumb" loading="lazy">
             <span class="portfolio-badge">Video</span>
             <div class="portfolio-overlay-hint">
               <i class="fa-solid fa-magnifying-glass-plus"></i>
             </div>
           </div>
           <div class="portfolio-body">
-            <h3 class="portfolio-title">Project 5</h3>
-            <p class="portfolio-desc">
-              Short project description (To be updated, e.g., multimedia advertising, class assignment video, or animation).
-            </p>
-            <div class="portfolio-card-footer">
-              <span class="portfolio-view-btn">View Details <i class="fa-solid fa-arrow-right"></i></span>
-            </div>
-          </div>
-        </article>
-
-        <!-- ===================================================================
-             Project 6 (Category: Web & UI)
-             ===================================================================
-        -->
-        <article class="portfolio-card reveal-on-scroll" data-category="web" data-full-desc="Detailed description for Project 6 (To be updated): Interactive media, website layout, and creative digital presentation.">
-          <div class="portfolio-thumb-wrapper">
-            <img src="images/portfolio/portfolio-6.jpg" alt="Project 6 - Digital Web Media" class="portfolio-thumb" loading="lazy">
-            <span class="portfolio-badge">Web</span>
-            <div class="portfolio-overlay-hint">
-              <i class="fa-solid fa-magnifying-glass-plus"></i>
-            </div>
-          </div>
-          <div class="portfolio-body">
-            <h3 class="portfolio-title">Project 6</h3>
-            <p class="portfolio-desc">
-              Short project description (To be updated, e.g., interactive media, digital web prototype, or user interface).
-            </p>
-            <div class="portfolio-card-footer">
-              <span class="portfolio-view-btn">View Details <i class="fa-solid fa-arrow-right"></i></span>
+            <h3 class="portfolio-title">วิดีโอโฆษณา</h3>
+            <div class="portfolio-view-icon" aria-hidden="true">
+              <i class="fa-solid fa-arrow-right"></i>
             </div>
           </div>
         </article>
@@ -231,23 +204,25 @@
   </main>
 
   <!-- =========================================================================
-       3. Lightbox / Modal for Large Image & Details
+       3. Lightbox / Modal สำหรับแสดงภาพขยายขนาดใหญ่และรายละเอียดโปรเจกต์
        ========================================================================= -->
   <div class="modal-backdrop" id="portfolioModal" role="dialog" aria-modal="true" aria-hidden="true">
     <div class="modal-container">
-      <!-- Close Button -->
+      <!-- ปุ่มปิด Modal -->
       <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">
         <i class="fa-solid fa-xmark"></i>
       </button>
       
+      <!-- ส่วนแสดงภาพขนาดใหญ่ -->
       <div class="modal-image-wrapper">
         <img src="" alt="Enlarged project preview" class="modal-image">
       </div>
       
+      <!-- ส่วนแสดงชื่อและรายละเอียดโปรเจกต์ -->
       <div class="modal-content-body">
         <span class="modal-badge">Category</span>
         <h2 class="modal-title">Project Title</h2>
-        <p class="modal-desc">Project Description</p>
+        <p class="modal-desc">Project details will be displayed here.</p>
       </div>
     </div>
   </div>

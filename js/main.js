@@ -142,9 +142,9 @@ function initPortfolioModal() {
       if (modalCategory && badge) {
         modalCategory.textContent = badge.textContent;
       }
-      if (modalDesc && desc) {
+      if (modalDesc) {
         const fullDesc = card.getAttribute('data-full-desc');
-        modalDesc.textContent = fullDesc || desc.textContent;
+        modalDesc.textContent = fullDesc || (desc ? desc.textContent : 'Project details will be updated here. (รายละเอียดโปรเจกต์จะเพิ่มในภายหลัง)');
       }
 
       // Display Modal

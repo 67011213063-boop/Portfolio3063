@@ -23,7 +23,7 @@
   --accent-soft: #f0f9ff;      /* ฟ้าพาสเทลพื้นหลังจางๆ */
 
   /* สีพื้นผิวและข้อความ */
-  --bg-page: #f8fafc;
+  --bg-page: #1f374e;
   --bg-gradient: linear-gradient(135deg, #fdf2f8 0%, #f5f3ff 50%, #f0f9ff 100%);
   --surface: #ffffff;
   --surface-glass: rgba(255, 255, 255, 0.85);
@@ -804,7 +804,7 @@ ul, ol {
 .portfolio-thumb-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
   background-color: var(--primary-soft);
 }
@@ -838,7 +838,7 @@ ul, ol {
 .portfolio-overlay-hint {
   position: absolute;
   inset: 0;
-  background: rgba(144, 97, 249, 0.4);
+  background: rgba(144, 97, 249, 0.35);
   backdrop-filter: blur(2px);
   display: flex;
   align-items: center;
@@ -854,50 +854,47 @@ ul, ol {
 }
 
 .portfolio-body {
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.portfolio-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--text-main);
-  margin-bottom: 8px;
-}
-
-.portfolio-desc {
-  font-size: 0.92rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: 20px;
-  flex-grow: 1;
-}
-
-.portfolio-card-footer {
+  padding: 18px 22px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 14px;
-  border-top: 1px solid #f1f5f9;
+  gap: 12px;
+  background: var(--surface-card);
 }
 
-.portfolio-view-btn {
-  font-size: 0.88rem;
-  font-weight: 600;
+.portfolio-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0;
+  line-height: 1.4;
+  transition: color var(--transition-fast);
+}
+
+.portfolio-card:hover .portfolio-title {
   color: var(--primary);
-  display: inline-flex;
+}
+
+.portfolio-view-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--primary-soft);
+  color: var(--primary);
+  display: flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  transition: all var(--transition-normal);
+  border: 1px solid rgba(192, 132, 252, 0.25);
 }
 
-.portfolio-view-btn i {
-  transition: transform var(--transition-fast);
-}
-
-.portfolio-card:hover .portfolio-view-btn i {
-  transform: translateX(4px);
+.portfolio-card:hover .portfolio-view-icon {
+  background: linear-gradient(135deg, var(--secondary-light), var(--primary));
+  color: #ffffff;
+  transform: translateX(4px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(144, 97, 249, 0.3);
 }
 
 /* --------------------------------------------------------------------------
